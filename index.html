@@ -263,12 +263,15 @@ const DEFAULT_NODES = [
   { id: 'fv',    label: 'Finviz',           url: 'https://finviz.com',         cat: 'finance', r: 12, fixed: false },
   { id: 'wa',    label: 'WhatsApp Web',     url: 'https://web.whatsapp.com',   cat: 'comms',   r: 10, fixed: false },
   { id: 'ig',    label: 'Simon Clut IG',    url: 'https://instagram.com/simonclut', cat: 'comms', r: 9, fixed: false },
-  { id: 'clima', label: 'Google Clima',     url: 'https://google.com/search?q=clima', cat: 'intel', r: 9, fixed: false },
+  { id: 'clima',   label: 'Google Clima', url: 'https://google.com/search?q=clima',  cat: 'intel', r: 9, fixed: false },
+  { id: 'notion',  label: 'Notion',       url: 'https://notion.so',                  cat: 'other', r: 10, fixed: false },
+  { id: 'obsidian',label: 'Obsidian',     url: 'https://obsidian.md',                cat: 'other', r: 10, fixed: false },
 ];
 
 const DEFAULT_EDGES = [
   ['hub','wm'],['hub','og'],['hub','fv'],['hub','wa'],['hub','ig'],['hub','clima'],
   ['wm','og'],['fv','wm'],['wa','ig'],
+  ['hub','notion'],['hub','obsidian'],['notion','obsidian'],
 ];
 
 function loadData() {
